@@ -1,0 +1,89 @@
+labolatory_2 (Simple mathematical calculations)
+Task 1. Write a program to calculate the value of a function.
+
+
+labolatory_3 (Standard data types. Type conversion.)
+Task 1:
+1. Create variables of two different types as specified in the variant;
+2. Perform arithmetic operations and assign the results to two other variables of the first and second types; check whether the values ​​in the variables storing the calculation results match;
+3. Implicitly convert variables from one type to another;
+4. Explicitly convert variables from one type to another;
+5. Output the result of comparing two variables using the comparison operators specified in the variant;
+6. Check whether data truncation occurred during type conversion (both explicit and implicit);
+7. Display the number of bytes the variables occupy in memory;
+8. Display the memory addresses of the variables;
+
+
+labolatory_4 (Using the `if` branching statement to calculate a mathematical expression)
+Task 1. Develop a flowchart and write program code to calculate a value of the function within a specified interval using a 
+conditional statement, in accordance with the individual variant.
+
+
+labolatory_5 (Using the switch statement)
+Task 1. Develop a program that, upon entering a code, returns the sine, cosine, or tangent (1, 2, or 3, respectively)
+for an angle in degrees, the value of which is also entered.
+
+
+labolatory_6 (Using the for loop)
+Task 1: Develop a flowchart and a software application to tabulate the function according to the assigned variant.
+Task 1: Develop a flowchart and a software application to tabulate the function according to the assigned variant.
+
+
+labolatory_7 (Using while and do-while loops)
+Objective: To learn how to use the `while` and `do-while` loop statements.
+
+
+labolatory_8 (Using one-dimensional arrays in software development)
+Objective: To become familiar with the basic techniques for working with one-dimensional arrays and
+to acquire practical skills in their application.
+
+
+labolatory_9 (Using two-dimensional arrays in software development)
+Objective: To become familiar with the basic techniques of working with multidimensional arrays
+and to acquire practical skills in their application.
+
+
+labolatory_10 (Pointers and dynamic arrays)
+Objective: To learn how to dynamically allocate memory for arrays and use pointers.
+
+
+labolatory_11 (Working with Date, Time, and Randomness in C++)
+Objective: To learn how to obtain and format the current date and time, measure the execution time of program segments, 
+and generate pseudo-random numbers to populate arrays.
+
+
+labolatory_12 (Construction of subroutines)
+Objective: To learn how to create and use subroutines.
+
+
+labolatory_13 (Program debugging and testing)
+Objective: to become familiar with the fundamental methods of debugging and testing C++ programs,
+to learn how to identify and correct syntax, logic, and runtime errors, and to verify program correctness using test data.
+
+
+labolatory_14 (Working with strings. Arrays of type char.)
+Objective: To learn how to perform operations on character arrays and strings.
+Task 1:
+    Given a text containing letters and spaces. If the text does not contain the word "vesna" (spring), leave it unchanged. Otherwise, replace all occurrences of the word "vesna" with "zyma" (winter). A word is defined as a sequence of letters separated by spaces.
+Task 2:
+    Create a table of words from the given text, indicating the number of times each word appears in the text.
+
+
+labolatory_15 (Working with strings. String type.)
+Objective: To learn how to perform operations on strings.
+
+
+labolatory_16 (Function templates)
+Objective: To learn how to create and use function templates.
+
+For all variants: Develop a program to process a two-dimensional array according to the specific variant; 
+generate the array elements randomly. Demonstrate the program's operation using three different types of two-dimensional arrays. 
+Implement a console menu to select the data type to be used. Use function templates to complete the task.
+
+
+labolatory_17 (Structures as user-defined types. Working with files.)
+Objective: To learn how to use an array of structures and process text files.
+
+
+labolatory_18 (C++ Multithreading Fundamentals)
+Objective: Learn to use std::thread.
