@@ -1,0 +1,123 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <random>
+#include <stdexcept>
+
+void formation(int* Array, int N)
+{
+    std::mt19937 gen(time(nullptr));
+    std::uniform_int_distribution<> dis(-100, 100);
+
+    for (size_t i = 0; i < N; ++i)
+    {
+        Array[i] = dis(gen);
+    }
+
+}
+
+void sortArrayAscending(int* Array, int N)
+{
+    for (size_t i = 0; i < N; ++i)
+    {
+        for (size_t j = i + 1; j < N; ++j)
+        {
+            if (Array[i] > Array[j])
+            {
+                int temp = Array[i];
+                Array[i] = Array[j];
+                Array[j] = temp;
+            }
+        }
+    }
+}
+
+void sortArrayDescending(int* Array, int N)
+{
+    for (size_t i = 0; i < N; ++i)
+    {
+        for (size_t j = i + 1; j < N; ++j)
+        {
+            if (Array[i] < Array[j])
+            {
+                int temp = Array[i];
+                Array[i] = Array[j];
+                Array[j] = temp;
+            }
+        }
+    }
+}
+
+void vuvidAraay(int* Array, int N)
+{
+    std::cout << "\n\n\tArray:\n";
+    for (size_t i = 0; i < N; ++i)
+    {
+        std::cout << Array[i] << "\t";
+    }
+    std::cout << "\n\n";
+}
+
+int perevirca(int* Array, int N)
+{
+    for (size_t i = 0; i < N - 1; ++i)
+    {
+        if (Array[i] > Array[i + 1])
+        {
+            return -1;
+        }
+    }
+    return 2;
+}
+
+int main()
+{
+    std::cout << "\t\tTask_1\n";
+
+    size_t N;
+    int caseNumber;
+    std::cout << "\tEnter number element Array: ";
+    std::cin >> N;
+    while (N < 2)
+    {
+        std::cout << "\nArray cannot be less than two elements. Please enter again: ";
+        std::cin >> N;
+    }
+    int* Array = new int[N];
+    formation(Array, N);
+
+    std::cout << "\tEnter 1: if need sort Array ascending, 2: descending, 3: no sorting: ";
+    do
+    {
+        std::cin >> caseNumber;
+        switch (caseNumber)
+        {
+        case 1:  sortArrayAscending(Array, N); break;
+        case 2:  sortArrayDescending(Array, N); break;
+        case 3:  std::cout << "We dont sort:\n"; break;
+        default: std::cout << "Wrong number, enter again: "; break;
+        }
+    } while (caseNumber > 3 || caseNumber < 1);
+
+    vuvidAraay(Array, N);
+
+    try
+    {
+        int EndPerevirka = perevirca(Array, N);
+        if (EndPerevirka == -1)
+        {
+            throw std::invalid_argument("Array isnt sorted in ascending order!!!");
+        }
+    }
+
+    catch (std::invalid_argument& e)
+    {
+        std::cout << e.what();
+        return 1;
+    }
+
+    std::cout << "Yes the array is indeed sorted in ascending order!!!";
+
+    delete[] Array;
+    return 0;
+}
