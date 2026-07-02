@@ -1,0 +1,28 @@
+﻿#include <stdio.h>
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Ukrainian");
+	cout << "\n----------Laboratory work 2----------\n\n";
+	float x, y, z;
+	cout << "Enter date x, y, z:" << endl;
+	cout << "x= ";
+	cin >> x;
+	cout << "y= ";
+	cin >> y;
+	cout << "z= ";
+    cin >> z;
+	cout << "Calculation result:" << endl;
+	float f;
+    f = (exp(sin(y)) + pow(x + y, 1. / 4)) / pow(log(z * y), 3);
+    
+	cout << "f =" << f << endl;
+
+	getchar();
+	return 0;
+
+}
