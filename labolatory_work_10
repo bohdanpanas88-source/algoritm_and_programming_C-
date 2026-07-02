@@ -1,0 +1,98 @@
+///---------------------TASK_1_AND_2--------------------------
+
+#include <iostream>
+#include <random>
+
+int main()
+{
+	std::cout << "                  Task_1                 " << "\n";
+	size_t n = 0;
+	std::cout << "Enter n: ";
+	std::cin >> n;
+
+	int* O_array;
+	O_array = new int[n];
+
+	std::mt19937 gen(time(0));
+	std::uniform_int_distribution<> distrib1(-20, 20);
+	for (size_t i = 0; i < n; ++i)
+	{
+		O_array[i] = distrib1(gen);
+	}
+
+	std::cout << "Array O: " << "\n";
+	for (size_t i = 0; i < n; ++i)
+	{
+		std::cout << O_array[i] << "\t";
+	}
+	std::cout << "\n";
+
+	int min = O_array[0];
+	for (size_t i = 0; i < n; ++i)
+	{
+		if (min > O_array[i])
+			min = O_array[i];
+	}
+	O_array[0] = min;
+	std::cout << "New array O: " << "\n";
+	for (size_t i = 0; i < n; ++i)
+	{
+		std::cout << O_array[i] << "\t";
+	}
+	std::cout << "\n\n";
+
+	delete[] O_array;
+	std::cout << std::flush;
+
+
+	std::cout << "                      Task_2" << "\n";
+	size_t height = 0, width = 0;
+	int** B_array, dob = 1;
+
+	std::cout << "Enter height: ";
+	std::cin >> height;
+	std::cout << "Enter width: ";
+	std::cin >> width;
+
+	B_array = new int* [height];
+	for (size_t i = 0; i < height; ++i)
+		B_array[i] = new int[width];
+
+	std::uniform_int_distribution<> distrib2(-30, 30);
+	for (size_t i = 0; i < height; ++i)
+	{
+		for (size_t j = 0; j < width; ++j)
+		{
+			B_array[i][j] = distrib2(gen);
+		}
+	}
+
+	std::cout << "Array B: " << "\n";
+	for (size_t i = 0; i < height; ++i)
+	{
+		for (size_t j = 0; j < width; ++j)
+		{
+			std::cout << B_array[i][j] << "\t";
+			if (B_array[i][j] > 0)
+			{
+				dob *= B_array[i][j];
+			}
+		}
+		std::cout << "\n";
+	}
+	std::cout << "Dobutok array B: " << dob << "\n";
+
+	for (size_t i = 0; i < height; i++)
+	{
+		delete[] B_array[i];
+	}
+	delete[] B_array;
+
+	std::cout << std::flush;
+
+	return 0;
+}
+
+
+
+
